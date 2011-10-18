@@ -1,0 +1,6 @@
+A simple Flask application modelled using MVC approach.
+This will serve as a reference for all future Flask applications.
+emplates and CSS based on the Flaskr example from Flask.
+
+To run, 
+$ python runserver.py
