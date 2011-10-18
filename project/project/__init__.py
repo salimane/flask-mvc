@@ -7,6 +7,6 @@ app = Flask('project')
 app.config['SECRET_KEY'] ='random'
 
 import project.models
-import project.views
+import project.controller
 
 
