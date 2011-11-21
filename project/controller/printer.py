@@ -9,7 +9,7 @@ class CreateForm(Form):
 
 @app.route('/')
 def start():
-  return render_template('index.html')
+  return render_template('printer/index.html')
 
 @app.route('/print', methods=['GET','POST'])
 def printer():
@@ -17,7 +17,7 @@ def printer():
   if request.method=='POST' and form.validate():
     printer = Printer()
     printer.show_string(form.text.data)
-    return render_template('index.html')
-  return render_template('print.html', form=form)
+    return render_template('printer/index.html')
+  return render_template('printer/print.html', form=form)
 
 
