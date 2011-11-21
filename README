@@ -1,6 +1,6 @@
-A simple Flask application modelled using MVC approach.
-This will serve as a reference for all future Flask applications.
-emplates and CSS based on the Flaskr example from Flask.
+A simple application structured following the MVC pattern using Flask micro python framework.
+It basically here to be my base skeleton for new python web applications
 
-To run, 
-$ python runserver.py
+To run,
+cd flask-mvc/project
+python runserver.py
