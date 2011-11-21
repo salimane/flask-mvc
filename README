@@ -2,5 +2,5 @@ A simple application structured following the MVC pattern using Flask micro pyth
 It basically here to be my base skeleton for new python web applications
 
 To run,
-cd flask-mvc/project
+cd flask-mvc
 python runserver.py
