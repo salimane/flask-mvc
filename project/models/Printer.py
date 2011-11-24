@@ -7,4 +7,4 @@ class Printer(object):
     if text == '':
       flash("You didn't enter any text to flash")
     else:
-      flash(text)
+      flash(text+"!!!")

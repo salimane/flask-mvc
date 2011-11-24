@@ -1,10 +1,10 @@
 {% extends "layout/layout.html" %}
 {% block body %}
   Test application
-  <form action="{{ url_for('printer') }}" method=post>
+  <form action="{{ url_for('printer') }}" method="post">
     {{ form.csrf }}
     <dl>
-      <dd>{{ form.text.label }} {{ form.text(size=20) }}{{ render_error(form.text) }}</dd>      
+      <dd>{{ form.text.label }} {{ form.text(size = 20) }}{{ render_error(form.text) }}</dd>
       <dd><input type="submit" value="Flash"/></dd>
     </dl>
   </form>
