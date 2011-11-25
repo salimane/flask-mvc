@@ -3,4 +3,4 @@ __version__ = '0.1'
 from flask import Flask
 app = Flask('project')
 app.config['SECRET_KEY'] = 'random'
-from project.controller import *
+from project.controllers import *

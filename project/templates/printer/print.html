@@ -1,6 +1,5 @@
 {% extends "layout/layout.html" %}
 {% block body %}
-  Test application
   <form action="{{ url_for('printer') }}" method="post">
     {{ form.csrf }}
     <dl>
