@@ -16,3 +16,9 @@ h2              { font-size: 1.2em; }
 .flash          { background: #CEE5F5; padding: 0.5em;
                   border: 1px solid #AACBE2; }
 .error          { background: #F0D6D6; padding: 0.5em; }
+
+.wrapper        { margin:20px auto; width:250px;}
+div.code_error h1 { line-height:58px;font-size:98px; font-weight:bold; float:left; width:100px;}
+div.message     { width:130px; float:left}
+.clear          { clear:both;}
+.wrapper p      { margin:0 0 0 0 ; padding:40px 0 0 0;}
