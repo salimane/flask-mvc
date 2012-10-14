@@ -5,11 +5,10 @@ Demo : http://cold-leaf-6227.herokuapp.com/
 
 Dependencies :
 
-    sudo easy_install -U flask
-    sudo easy_install -U flask-wtf
+	git clone git://github.com/salimane/flask-mvc.git
+	cd flask-mvc
+    pip install -r requirements.txt
 
 To run:
 
-    git clone git://github.com/salimane/flask-mvc.git
-    cd flask-mvc
     python runserver.py

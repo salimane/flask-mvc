@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from project import app
 from flask import render_template, request
-from flaskext.wtf import Form, TextField, validators
+from flask.ext.wtf import Form, TextField, validators
 
 
 class CreateForm(Form):
