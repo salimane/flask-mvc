@@ -1,7 +1,7 @@
 A simple boilerplate application following the MVC pattern using Flask micro python framework.
 It basically here to be my base skeleton for new python web applications
 
-Demo : http://cold-leaf-6227.herokuapp.com/
+Demo : http://flask-mvc-salimane.herokuapp.com/
 
 Dependencies :
 
