@@ -1,4 +1,4 @@
-Flask==0.9
-Flask-WTF==0.8.2
-Jinja2==2.6
-Flask-DebugToolbar==0.7.1
+Flask==0.10
+Flask-WTF==0.8.3
+Jinja2==2.7
+Flask-DebugToolbar==0.8.0
