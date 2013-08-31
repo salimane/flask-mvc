@@ -12,3 +12,7 @@ Dependencies :
 To run:
 
     python runserver.py
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/salimane/flask-mvc/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
