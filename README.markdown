@@ -4,10 +4,11 @@ It basically here to be my base skeleton for new python web applications
 Demo : http://flask-mvc-salimane.herokuapp.com/
 
 Dependencies :
-
+	
 	git clone git://github.com/salimane/flask-mvc.git
 	cd flask-mvc
-    pip install -r requirements.txt
+    	if you have old version of project: pip uninstall -r requirements.txt
+	pip install -r requirements.txt
 
 To run:
 
