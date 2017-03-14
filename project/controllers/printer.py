@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 from project import app
 from flask import render_template, request
-from flask.ext.wtf import Form, TextField, validators
+from flask_wtf import FlaskForm
+from wtforms import StringField
+from wtforms.validators import DataRequired
 
 
-class CreateForm(Form):
-    text = TextField(u'Text:', [validators.Length(min=1, max=20)])
+class CreateForm(FlaskForm):
+    text = StringField('name', validators=[DataRequired()])
 
 
 @app.route('/')
