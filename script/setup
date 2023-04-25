@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e -x
+
+export REPO_DIR=$( cd $(dirname "`dirname $0`") && pwd )
+if [ -z "$PYTHON_VIRTUALENV" ]; then
+    export PYTHON_VIRTUALENV=".flask-mvc-venv-`uname -s`-`uname -m`"
+fi
+export VIRTUAL_ENV_DIR="$REPO_DIR/$PYTHON_VIRTUALENV"
+python -m venv $PYTHON_VIRTUALENV
+echo "Using virtualenv located in : $VIRTUAL_ENV_DIR"
+pip install -r $REPO_DIR/requirements.txt

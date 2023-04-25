@@ -1,4 +1,32 @@
-Flask
-Flask-WTF
-Jinja2
-Flask-DebugToolbar
+Flask-Admin==1.6.1
+Flask-Assets==2.0
+Flask-Babel==3.1.0
+Flask-BabelEx==0.9.4
+Flask-Bcrypt==1.0.1
+Flask-Cors==3.0.10
+Flask-DebugToolbar==0.13.1
+Flask-Limiter==3.3.0
+Flask-Login==0.6.2
+Flask-Mail==0.9.1
+Flask-Migrate==4.0.4
+Flask-Principal==0.4.0
+Flask-QueryInspect==0.1.2
+Flask-RESTful==0.3.9
+Flask-Security==3.0.0
+Flask-SQLAlchemy==3.0.3
+Flask-Testing==0.8.1
+Flask-Uploads==0.2.1
+Flask-WTF==1.1.1
+Flask==2.2.3
+Jinja2==3.1.2
+tornado==6.3.1
+setuptools==67.7.2 
+
+# jobs
+Celery==5.2.7
+flower==1.2.0
+
+# Other
+itsdangerous==2.1.2
+cssmin==0.2.0
+jsmin==3.0.1

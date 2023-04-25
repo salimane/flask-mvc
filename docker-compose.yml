@@ -1,0 +1,10 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:15.2-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: flask_dev
+      POSTGRES_USER: flask
+      POSTGRES_PASSWORD: flask
