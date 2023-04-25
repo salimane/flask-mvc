@@ -1,6 +1,6 @@
 # Flask-mvc
 
-![Build Status](https://github.com/salimane/flask-mvc/actions/workflows/main.yml/badge.svg)
+[![Build Status](https://github.com/salimane/flask-mvc/actions/workflows/main.yml/badge.svg)](https://github.com/salimane/flask-mvc/actions)
 [![Maintenance](https://img.shields.io/maintenance/yes/2023.svg)](https://github.com/salimane/flask-mvc/commits/master)
 
 
