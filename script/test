@@ -14,10 +14,10 @@ pip install -q -r $REPO_DIR/requirements-test.txt
 cd $REPO_DIR
 export PYTHONPATH=".:`pwd`"
 
-echo "==> Static Code Analysis for PEP8 style guide and various errors"
-flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-echo "==> Full flake8 style check"
-flake8 --config=setup.cfg --statistics --count .
+echo "==> Format check (black)"
+black --check --diff .
+echo "==> Lint (ruff)"
+ruff check .
 echo "==> Executing tests with code coverage collection"
 pytest --cov=project --cov-report=html --cov-report=term-missing tests/
 

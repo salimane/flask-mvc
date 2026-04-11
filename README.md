@@ -54,7 +54,7 @@ flask-mvc/
 
 ## Prerequisites
 
-- Python 3.11+
+- Python 3.14+
 - pip
 
 Optional (for Python version management):
@@ -62,7 +62,7 @@ Optional (for Python version management):
 ```bash
 brew install asdf
 asdf plugin add python
-asdf install python 3.12.3
+asdf install python 3.14.4
 ```
 
 ---

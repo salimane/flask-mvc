@@ -1,0 +1,100 @@
+[project]
+name = "flask-mvc"
+version = "0.1.0"
+description = "Flask MVC boilerplate following the MVC pattern"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Salimane Adjao Moustapha", email = "me@salimane.com" }]
+requires-python = ">=3.14"
+keywords = ["flask", "mvc", "boilerplate", "python", "web"]
+dependencies = [
+    "Flask==3.0.3",
+    "Flask-WTF==1.2.1",
+    "gunicorn==22.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/salimane/flask-mvc"
+Repository = "https://github.com/salimane/flask-mvc"
+Changelog = "https://github.com/salimane/flask-mvc/releases"
+
+# ---------------------------------------------------------------------------
+# Black
+# ---------------------------------------------------------------------------
+[tool.black]
+line-length = 100
+target-version = ["py314"]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | .*venv.*
+  | __pycache__
+  | \.eggs
+  | dist
+  | build
+)/
+'''
+
+# ---------------------------------------------------------------------------
+# Ruff  (replaces flake8 + isort + pyupgrade)
+# ---------------------------------------------------------------------------
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+indent-width = 4
+fix = true
+exclude = [
+    ".git",
+    ".venv",
+    ".*venv.*",
+    "__pycache__",
+    ".eggs",
+    ".pytest_cache",
+    ".ruff_cache",
+    "dist",
+    "build",
+]
+
+[tool.ruff.lint]
+# E/W = pycodestyle  F = pyflakes  I = isort  B = flake8-bugbear
+# C4 = flake8-comprehensions  UP = pyupgrade  SIM = flake8-simplify
+select = ["E", "W", "F", "I", "B", "C4", "UP", "SIM"]
+# E501 line-length is Black's job; avoid double-reporting
+ignore = [
+    "E501",
+    # Magic values in assertions/views are self-explanatory in a boilerplate
+    "SIM108",
+]
+fixable = ["ALL"]
+unfixable = []
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.lint.isort]
+known-first-party = ["project"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = [
+    "S101",   # assert statements are fine in tests
+    "B011",   # assert False is fine in tests
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+# ---------------------------------------------------------------------------
+# Coverage
+# ---------------------------------------------------------------------------
+[tool.coverage.run]
+source = ["project"]
+omit = ["tests/*", ".*venv*/*"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+fail_under = 90
+
