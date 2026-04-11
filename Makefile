@@ -1,4 +1,5 @@
-.PHONY: all check-version docker-build docker-push docker-run run set-revision clean setup
+.PHONY: all check-version docker-build docker-push docker-run run set-revision clean setup test lint fmt
+
 VERSION := $(strip $(shell [ -d .git ] && git describe --always --tags --dirty))
 BUILD_DATE := $(shell date -u +"%Y-%m-%dT%H:%M:%S%Z")
 VCS_URL := $(shell [ -d .git ] && git config --get remote.origin.url)
@@ -50,8 +51,10 @@ setup:
 test:
 	script/test
 
-flake:
-	flake8 --config=setup.cfg --statistics --count .
+lint:
+	ruff check .
 
-autopep8:
-	autopep8 -ira .
+fmt:
+	black .
+	ruff check --fix .
+
