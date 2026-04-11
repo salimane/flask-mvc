@@ -8,13 +8,16 @@ fi
 export VIRTUAL_ENV_DIR="$REPO_DIR/$PYTHON_VIRTUALENV"
 python -m venv $PYTHON_VIRTUALENV
 echo "Using virtualenv located in : $VIRTUAL_ENV_DIR"
-pip install -r $REPO_DIR/requirements-test.txt
+. "$VIRTUAL_ENV_DIR/bin/activate"
+pip install -q -r $REPO_DIR/requirements-test.txt
 
 cd $REPO_DIR
 export PYTHONPATH=".:`pwd`"
 
 echo "==> Static Code Analysis for PEP8 style guide and various errors"
-# flake8 --config=setup.cfg --statistics --count .
 flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-# echo "==> Executing tests with code coverage collection"
-# py.test --cov=./ --cov-report=html test/test.py
+echo "==> Full flake8 style check"
+flake8 --config=setup.cfg --statistics --count .
+echo "==> Executing tests with code coverage collection"
+pytest --cov=project --cov-report=html --cov-report=term-missing tests/
+
