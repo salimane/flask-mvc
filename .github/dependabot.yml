@@ -1,0 +1,36 @@
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: "daily"
+      time: "10:00"
+      timezone: "Europe/Berlin"
+    commit-message:
+      prefix: "deps"
+      prefix-development: "deps-dev"
+      include: "scope"
+    open-pull-requests-limit: 1
+    rebase-strategy: "auto"
+    groups:
+      batch-updates:
+        patterns:
+          - "*"
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      time: "10:00"
+      timezone: "Europe/Berlin"
+    commit-message:
+      prefix: "docker"
+    open-pull-requests-limit: 1
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      time: "10:00"
+      timezone: "Europe/Berlin"
+    commit-message:
+      prefix: "ci"
+    open-pull-requests-limit: 1

@@ -1,6 +1,7 @@
 {% extends "layout/layout.html" %}
+{% from "layout/macros.html" import render_error %}
 {% block body %}
-    <form action="{{ url_for('printer') }}" method="post">
+    <form action="{{ url_for('printer.printer') }}" method="post">
         {{ form.csrf_token }}
         <dl>
             <dd>{{ form.text.label }} {{ form.text(size=20) }} {{ render_error(form.text) }}</dd>
@@ -8,3 +9,4 @@
         </dl>
     </form>
 {% endblock %}
+

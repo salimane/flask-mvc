@@ -1,4 +1,1 @@
-import os
-import glob
-__all__ = [os.path.basename(
-    f)[:-3] for f in glob.glob(os.path.dirname(__file__) + "/*.py") if not f.endswith('__init__.py')]
+# Blueprints are registered explicitly in project/__init__.py via create_app().
