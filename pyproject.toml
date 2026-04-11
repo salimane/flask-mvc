@@ -91,6 +91,7 @@ line-ending = "auto"
 # ---------------------------------------------------------------------------
 [tool.coverage.run]
 source = ["project"]
+branch = true
 omit = ["tests/*", ".*venv*/*"]
 
 [tool.coverage.report]
