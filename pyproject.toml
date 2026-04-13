@@ -8,9 +8,9 @@ authors = [{ name = "Salimane Adjao Moustapha", email = "me@salimane.com" }]
 requires-python = ">=3.14"
 keywords = ["flask", "mvc", "boilerplate", "python", "web"]
 dependencies = [
-    "Flask==3.0.3",
-    "Flask-WTF==1.2.1",
-    "gunicorn==22.0.0",
+    "Flask==3.1.3",
+    "Flask-WTF==1.2.2",
+    "gunicorn==25.3.0",
 ]
 
 [project.urls]
