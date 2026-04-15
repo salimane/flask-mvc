@@ -12,7 +12,7 @@ Flask-Migrate==4.1.0
 Flask-Principal==0.4.0
 Flask-QueryInspect==0.1.2
 Flask-RESTful==0.3.10
-Flask-Security==5.7.1
+Flask-Security==5.8.0
 Flask-SQLAlchemy==3.1.1
 Flask-Uploads==0.2.1
 Flask-WTF==1.2.2
