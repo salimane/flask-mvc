@@ -1,6 +1,6 @@
 -r requirements.txt
-black>=26.5.0
-ruff>=0.15.13
+black>=26.5.1
+ruff>=0.15.16
 pytest>=9.0.3
 pytest-cov>=7.1.0
 mock>=5.2.0
